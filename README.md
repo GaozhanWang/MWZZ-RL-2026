@@ -2,14 +2,12 @@
 
 ## Learning to Solve Stochastic Controls when Drifts and Running Rewards are Unknown: Theory, Algorithms and Convergence
 
-This repository contains the numerical algorithms and experiment runners accompanying our research on model-free reinforcement learning for continuous-time stochastic control.
+This repository contains the numerical algorithms and experiment runners accompanying our research on reinforcement learning for continuous-time stochastic control with model uncertainty.
 
 We study continuous-time, possibly high-dimensional stochastic control problems in which the drift coefficients and running reward functions are unknown. Following the exploratory reinforcement-learning framework of Wang, Zariphopoulou, and Zhou, controls are relaxed into probability distributions and exploration is encouraged through entropy regularization. Our objective is to develop theoretically grounded, efficient, and scalable algorithms that learn both:
 
-- the optimal value function, which solves the exploratory Hamilton–Jacobi–Bellman equation; and
+- the optimal value function, which solves the exploratory Hamilton–Jacobi–Bellman equation; 
 - the optimal exploratory feedback-control policy.
-
-When the diffusion coefficient is uncontrolled, probabilistic representations of the value function and its spatial gradient are constructed through an auxiliary reference process that depends only on the diffusion component of the dynamics. Fixed-point mappings derived from these representations lead to the proposed policy-iteration algorithms and their convergence analysis. We also study a special control-dependent diffusion setting, for which an additional probabilistic representation of the value-function Hessian is required.
 
 The repository includes one-dimensional and high-dimensional manufactured examples with analytical reference solutions, multi-period implementations, a model-based policy-iteration benchmark, and runner scripts configured to reproduce the numerical experiments reported in the paper.
 
