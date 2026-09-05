@@ -1,6 +1,6 @@
 # MWZZ-RL-2025
 
-## Reinforcement Learning for Continuous-Time Stochastic Optimization with Model Uncertainty
+## Learning to Solve Stochastic Controls when Drifts and Running Rewards are Unknown: Theory, Algorithms and Convergence
 
 This repository contains the numerical algorithms and experiment runners accompanying our research on model-free reinforcement learning for continuous-time stochastic control.
 
