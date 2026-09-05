@@ -13,33 +13,6 @@ The repository includes one-dimensional and high-dimensional manufactured exampl
 
 > **Research-code status.** This repository is intended to support the accompanying paper and reproduce its numerical results. It is not currently distributed as an installable Python package.
 
-## Method overview
-
-For a controlled state process of the form
-
-$$
-dX_s=b(s,X_s,a_s)\,ds+\sigma(s,X_s,a_s)\,dB_s,
-$$
-
-the principal model-free algorithms learn neural-network approximations of quantities such as
-
-$$
-v(t,x)\approx \nabla_x u(t,x),
-\qquad
-w(t,x,a)\approx b(t,x,a)\cdot\nabla_x u(t,x)+r(t,x,a).
-$$
-
-The learned function $w$ determines the entropy-regularized exploratory policy through a Gibbs distribution over the action space. The value function is then recovered using a probabilistic representation along independently generated reference trajectories.
-
-For the special control-dependent diffusion problem, four networks are trained jointly:
-
-$$
-u(x),\qquad v(x)\approx u_x(x),\qquad
-w(x,a),\qquad \theta(x)\approx u_{xx}(x).
-$$
-
-The problem-specification classes use known analytical coefficients to generate synthetic observations and benchmark data. In the model-free interpretation, these coefficients belong to the simulated environment; the analytical value functions and derivatives are used only for evaluation.
-
 ## Repository structure
 
 ```text
