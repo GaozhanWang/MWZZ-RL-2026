@@ -1,6 +1,6 @@
-# MWZZ-RL-2026 Our paper preprint is available at: https://arxiv.org/abs/2609.14972
+# Learning to Solve Stochastic Controls when Drifts and Running Rewards are Unknown: Theory, Algorithms and Convergence
 
-## Learning to Solve Stochastic Controls when Drifts and Running Rewards are Unknown: Theory, Algorithms and Convergence
+## Our paper preprint is available at: https://arxiv.org/abs/2609.14972
 
 This repository contains the numerical algorithms and experiment runners accompanying our research on reinforcement learning for continuous-time stochastic control with model uncertainty.
 
