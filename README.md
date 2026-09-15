@@ -1,4 +1,4 @@
-# MWZZ-RL-2026
+# MWZZ-RL-2026 Our paper preprint is available at: https://arxiv.org/abs/2609.14972
 
 ## Learning to Solve Stochastic Controls when Drifts and Running Rewards are Unknown: Theory, Algorithms and Convergence
 
