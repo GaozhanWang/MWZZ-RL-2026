@@ -1,9 +1,4 @@
 # ==============================================================================
-#     J(v,w) MINIMIZATION IN R^d WITH L^p / SOFTMAX TIME REDUCERS (d PARAM)
-# ==============================================================================
-# - State dim 'd' is defined once on the ProblemSpec: spec.d
-# - All components (models, SDE, Jacobian flow, kernels, Ψ line integral, FK)
-#   derive their shapes from spec.d
 # ==============================================================================
 
 import math
