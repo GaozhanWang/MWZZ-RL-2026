@@ -128,8 +128,6 @@ from algorithms.Algorithm1_single import (
 from algorithms.ProblemSpec import EX7
 ```
 
-The high-dimensional runners additionally reference `v2_highdim_0924`, and the Deep-BSDE runners reference `v1_deep_bsde_1005`. Those two trainer modules are not included in the current repository snapshot and must be added before those runner families can be executed.
-
 ## Running experiments
 
 After aligning the imports described above, run scripts from the repository root. For example:
