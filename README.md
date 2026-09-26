@@ -2,6 +2,22 @@
 
 ## Our paper preprint is available at: https://arxiv.org/abs/2609.14972
 
+### License and commercial inquiries
+
+This repository is source available under the
+[MWZZ-RL-2026 Academic Research-Only License](LICENSE).
+Use, modification, and sharing are permitted solely for noncommercial
+academic research, subject to the terms in that license.
+
+Commercial use, company R&D, and research under a for-profit company's
+sponsorship agreement require a separate written license from the relevant
+rights holder or its authorized representative. For licensing and
+collaboration inquiries, please contact Gaozhan Wang at [GAOZHANW@USC.EDU].
+An inquiry or collaboration discussion does not itself grant permission.
+
+Please cite the associated paper and this repository if you use the code
+in your research. Third-party components remain under their own licenses.
+
 This repository contains the numerical algorithms and experiment runners accompanying our research on reinforcement learning for continuous-time stochastic control with model uncertainty.
 
 We study continuous-time, possibly high-dimensional stochastic control problems in which the drift coefficients and running reward functions are unknown. Following the exploratory reinforcement-learning framework of Wang, Zariphopoulou, and Zhou, controls are relaxed into probability distributions and exploration is encouraged through entropy regularization. Our objective is to develop theoretically grounded, efficient, and scalable algorithms that learn both:
