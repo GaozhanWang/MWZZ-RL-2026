@@ -453,7 +453,12 @@ def integral_v_line_trap(v_model, t, x0, x1, steps=50):
     inp = torch.cat([t_grid.reshape(-1, 1), Y.reshape(-1, d)], dim=1)  # [(B(K+1)), 1+d]
     v_vals = v_model(inp).reshape(B, steps + 1, d)                      # [B,K+1,d]
 
-    trap = (v_vals[:, 0, :] + v_vals[:, -1, :] + 2.0 * v_vals[:, 1:-1, :].sum(dim=1)) / steps  # [B,d]
+    trap = (
+        v_vals[:, 0, :]
+        + v_vals[:, -1, :]
+        + 2.0 * v_vals[:, 1:-1, :].sum(dim=1)
+    ) / (2.0 * steps)  # [B,d]
+
     return (trap * Δx).sum(dim=1)  # [B]
 
 
