@@ -56,7 +56,7 @@ def one_run(run_idx: int):
     start = time.time()
     v_Model, w_Model, meta = train_vanilla_with_norm_d(
         spec,
-        T=spec.T, time_steps=TIME_STEPS,
+        T=T, time_steps=TIME_STEPS,
         training_path_size=TRAIN_PATHS, nn_batch_size=BATCH_SIZE, num_epochs=EPOCHS,
         neuron_number_v=NEURONS_V, neuron_number_w=NEURONS_W,
         learning_rate=LR, weight_decay=WEIGHT_DECAY,
