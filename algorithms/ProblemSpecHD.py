@@ -320,6 +320,6 @@ class EX7HighDim(ProblemSpecD):
     def running_reward_torch(self, t: torch.Tensor, x: torch.Tensor, a: torch.Tensor) -> torch.Tensor:
         q = (x * x).sum(dim=1) / float(self.d)                # [B]
         u = torch.exp(-(t**2 + q + 1.0))                      # [B]
-        ax = (2.0 * a.view(-1) * x.sum(dim=1) + 1.0) / float(self.d)  # [B]
+        ax = 1.0 + 2.0 * a.view(-1) * x.sum(dim=1) / float(self.d) # [B]
         return (2.0 * t + ax) * u
 
