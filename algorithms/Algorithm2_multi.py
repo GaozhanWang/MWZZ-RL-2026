@@ -1,12 +1,6 @@
 # ==============================================================================
 #   MULTI-PERIOD J-MINIMIZATION WITH BACKWARD STITCHING (Φ/Ψ + MASKS) — v4.3
 # ==============================================================================
-# - Same as v4.2, but the x0 "bank" for each segment is now REFRESHED **every
-#   epoch** inside train_single_segment by simulating the driftless reference 𝓧
-#   from time 0 to the segment start t0 (using the global initial law).
-# - No need to pass precomputed bank[j] anymore; train_multi_period does NOT
-#   call build_reference_banks and instead lets each segment self-refresh.
-# ==============================================================================
 
 import math
 import numpy as np
