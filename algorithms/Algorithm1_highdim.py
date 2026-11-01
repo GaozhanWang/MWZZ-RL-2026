@@ -646,7 +646,7 @@ def train_vanilla_with_norm_d(
                 int_c = integral_v_line_trap(v_Model, t_k, cur_x, next_c, steps=int_x_steps)  # [B]
                 int_X = integral_v_line_trap(v_Model, t_k, cur_x, next_X, steps=int_x_steps)  # [B]
 
-                reward_k = spec.running_reward_torch(t_k, next_X, a_batch) * dt_t             # [B]
+                reward_k = spec.running_reward_torch(t_k, cur_x, a_batch) * dt_t             # [B]
                 psi_k = (int_X - int_c + reward_k) / dt_t                                     # [B]
 
                 w_in = torch.cat([t_k.expand(B,1), cur_x, a_batch.view(B,1)], dim=1)          # [B,1+d+1]
