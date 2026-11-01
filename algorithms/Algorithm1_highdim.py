@@ -570,7 +570,8 @@ def train_vanilla_with_norm_d(
                 Jk = J[:, i, :, :]                            # [B,d,d]
                 eta = eta_from_sigma_J(S, Jk)                 # [B,d,d]
                 dW_i = dW[:, i, :]                            # [B,d]
-                inc = torch.bmm(eta, dW_i.unsqueeze(-1)).squeeze(-1)  # [B,d]
+                #inc = torch.bmm(eta, dW_i.unsqueeze(-1)).squeeze(-1)  # [B,d]
+                inc = torch.bmm(eta.transpose(1, 2), dW_i.unsqueeze(-1)).squeeze(-1)
                 M[:, i, :] = inc if i == 0 else M[:, i-1, :] + inc
 
             # 5) Φ: H = λ log ∫_A exp(w/λ) da  along 𝓧
