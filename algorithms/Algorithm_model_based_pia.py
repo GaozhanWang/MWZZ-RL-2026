@@ -5,21 +5,6 @@
 #   snapshot of the previous iteration:  pi(a|t,x) ∝ exp{ (b(t,x,a)*u_x + r(t,x,a)) / λ }.
 # - Does NOT directly train on u_x. Hence u_x can be inaccurate even when u is fit,
 #   which is the whole point of this baseline.
-#
-# Requirements:
-#   - ProblemSpec (same interface as your main algorithm): g, g_x, b_ctrl, sigma, sigma_x, r
-#   - EX4/EX5 (or your own problems) can be passed as `spec`.
-#
-# Exposed API:
-#   - build_u_model(...)
-#   - get_u_x(u_model, t, x, create_graph=False)
-#   - train_model_based_PIA(spec, ..., device=None)
-#   - probe_u_and_w(spec, u_model, t0, x0, a0, ...)
-#
-# Notes:
-#   - Uses log-sum-exp for the Gibbs normalization over an action grid.
-#   - Freezes policy_net each policy-iteration (deepcopy).
-#   - Early stopping per *inner* u-fit, and a policy-diff stopping across PIA loops.
 # ==============================================================================
 
 import math
